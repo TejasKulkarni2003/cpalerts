@@ -1,0 +1,95 @@
+body{
+    background-color: #323640;
+    width: 100%;
+    color: #ffffff;
+}
+button{
+    background-color: #323640;
+    border: none;
+}
+
+h5{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.container{
+    padding: 0% 0%;
+}
+.navbar{
+    padding: 0% 0%;
+    height: 3rem;
+    margin-left: 1%;
+}
+
+.nav{
+   background-color: #1A1E26;
+   padding-left: 1%;
+}
+
+.close-btn{
+    text-align: right;
+    font-size: 40px;
+    margin-right: 10%;
+}
+
+.header{
+    text-align: center;
+    line-height: 7rem;
+}
+
+.tch-col{
+    color : #979da6;
+}
+.ntch-col{
+    color : #ffffff;
+}
+
+.margin{
+    margin: 10% 20%;
+    text-align: center;
+    background-color: #323640;
+    border: none;
+}
+img{
+    width: auto;
+    height: auto;
+    background-color: aliceblue;
+    border-radius: 30%;
+}
+
+.cc{
+    margin:auto;
+    border-radius: 30%;
+    align-items: center;
+    background-color: aliceblue;
+}
+.img-div{
+    background-color: #323640;
+    position: relative;
+}
+.card-info{
+    border-radius: 15%;
+    background-color: #656A73;
+    padding: 10% 10%;
+}
+.hamburger{
+    margin:10% 25% ;
+    padding: 10% 10%;
+    font-size: 30px;
+}
+ion-icon{
+    font-size: 32px;
+    /* margin-left: 5%; */
+}
+.tittle{
+    font-size: 4rem;
+    margin-left: 35%;
+    font-family: 'Ubuntu', sans-serif;
+}
+.card-title{
+    font-family: 'Patrick Hand', cursive;
+}
+.card-text{
+    font-family: 'Nerko One', cursive; 
+}
