@@ -59,11 +59,18 @@ $("#leetcode").click(function(){
         k--;
     }
 })
+
+// var data;
+// fetch('https://codeforces.com/api/contest.list?gym=true')
+// .then((data)=> {
+//     return data.json();
+// })
+// .then((data)=> console.log(data.result[1472]))
+
+
 var data;
-fetch('https://codeforces.com/api/contest.list?gym=true')
+fetch('https://clist.by/api/v1/contest/?username=Tejas_11K&api_key=b2e8ad0a7b2b2fc0e702335bd482fc318d6f4845')
 .then((data)=> {
     return data.json();
 })
-.then((data)=> console.log(data.result[1472]))
-
-
+.then((data)=> console.log(data))
