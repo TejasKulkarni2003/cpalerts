@@ -83,9 +83,14 @@ ion-icon{
     /* margin-left: 5%; */
 }
 .tittle{
+    margin : 3% 0%;
+    padding: 3% 3%;
     font-size: 4rem;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 7rem;
+    
 }
 .card-title{
     font-family: 'Patrick Hand', cursive;
