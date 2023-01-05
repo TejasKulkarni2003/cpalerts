@@ -60,10 +60,7 @@ $("#leetcode").click(function(){
     }
 })
 
-<<<<<<< HEAD
 
-// const apiURL2 = `https://boiling-sea-29091.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
-// const apiURL = `https://mighty-temple-90200.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
 
 let responsec = fetch("https://kontests.net/api/v1/code_chef")
 responsec.then((v)=>{
@@ -165,43 +162,3 @@ function showcf(data){
 
 }
 
-
-// const apiURL2 = `https://boiling-sea-29091.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
-// const apiURL = `https://mighty-temple-90200.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
-
-// const url = "https://clist.by:443/api/v2/contest/?username=Tejas_11K&api_key=8ee194a509326a0f2ff4e3af1fa5d9831f3f4444&format=json&order_by=start&resource=codechef.com&end__gt=2022-12-31T06:15:17"
-
-// var apiData;
-
-// async function callAPI() {
-// 	try {
-// 		const response = await fetch(apiURL + `&resource=${hosts}&end__gt=${nowString}&start__gt=${todayStartString}`);
-// 		const data = await response.json();
-
-// 		console.log(data);
-// 	} catch {
-// 		const response = await fetch(apiURL2 + `&resource=${hosts}&end__gt=${nowString}&start__gt=${todayStartString}`);
-// 		const data = await response.json();
-
-// 		console.log(data);
-// 	}
-// }
-
-// callAPI();
-
-=======
-// var data;
-// fetch('https://codeforces.com/api/contest.list?gym=true')
-// .then((data)=> {
-//     return data.json();
-// })
-// .then((data)=> console.log(data.result[1472]))
-
-
-var data;
-fetch('https://clist.by/api/v1/contest/?username=Tejas_11K&api_key=b2e8ad0a7b2b2fc0e702335bd482fc318d6f4845')
-.then((data)=> {
-    return data.json();
-})
-.then((data)=> console.log(data))
->>>>>>> 77630e9db4cd0ef5bac6d06c41b09708b4fb6598
