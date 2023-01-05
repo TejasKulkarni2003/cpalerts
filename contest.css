@@ -3,9 +3,14 @@ body{
     width: 100%;
     color: #ffffff;
 }
+
 button{
     background-color: #323640;
     border: none;
+}
+
+button:hover{
+    scale: 1.1;
 }
 
 h5{
@@ -13,9 +18,25 @@ h5{
     font-weight: 800;
 }
 
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+a:hover{
+    scale: 1.1;
+    color: #fff;
+}
+
+.hamburger{
+    margin:10% 25% ;
+    padding: 10% 10%;
+    font-size: 30px;
+}
+
 .container{
     padding: 0% 0%;
 }
+
 .navbar{
     padding: 0% 0%;
     height: 3rem;
@@ -51,6 +72,7 @@ h5{
     background-color: #323640;
     border: none;
 }
+
 img{
     width: auto;
     height: auto;
@@ -64,32 +86,40 @@ img{
     align-items: center;
     background-color: aliceblue;
 }
+
 .img-div{
     background-color: #323640;
     position: relative;
 }
+
 .card-info{
     border-radius: 15%;
     background-color: #656A73;
-    padding: 10% 10%;
+    padding: 2% 2%;
 }
-.hamburger{
-    margin:10% 25% ;
-    padding: 10% 10%;
-    font-size: 30px;
-}
-ion-icon{
-    font-size: 32px;
-    /* margin-left: 5%; */
-}
+
 .tittle{
     font-size: 4rem;
-    margin-left: 35%;
+    text-align: center;
     font-family: 'Ubuntu', sans-serif;
 }
 .card-title{
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Prompt', cursive;
 }
 .card-text{
-    font-family: 'Nerko One', cursive; 
+    margin-top: 2rem;
+    /* font-size: 2rem; */
+    font-family: "Montserrat";
+    color: #1A1E26;
+    font-weight: 900;
+}
+
+.card-text:hover{
+    color: #fff;
+}
+
+
+ion-icon{
+    font-size: 32px;
+    /* margin-left: 5%; */
 }

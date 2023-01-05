@@ -59,11 +59,132 @@ $("#leetcode").click(function(){
         k--;
     }
 })
-var data;
-fetch('https://codeforces.com/api/contest.list?gym=true')
-.then((data)=> {
-    return data.json();
-})
-.then((data)=> console.log(data.result[1472]))
 
+
+// const apiURL2 = `https://boiling-sea-29091.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
+// const apiURL = `https://mighty-temple-90200.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
+
+let responsec = fetch("https://kontests.net/api/v1/code_chef")
+responsec.then((v)=>{
+    return v.json()
+}).then((contest)=>{
+    console.log(contest)
+    var v = contest[3].name
+    showcc(contest);
+})
+
+let responsel = fetch("https://kontests.net/api/v1/leet_code")
+responsel.then((v)=>{
+    return v.json()
+}).then((contest)=>{
+    console.log(contest)
+    showlc(contest);
+})
+
+
+let responsecf = fetch("https://kontests.net/api/v1/codeforces")
+responsecf.then((v)=>{
+    return v.json()
+}).then((contest)=>{
+    console.log(contest)
+    showcf(contest);
+})
+
+function showcc(data){
+    var latest = data.length-1;
+    var localDate = new Date(data[latest].start_time)
+    console.log(localDate)
+    var s = localDate + " ";
+    console.log(s)
+    var day = s.slice(0, 3)
+    var time = s.slice(16, 24)
+    var conDate = s.slice(4, 16)
+
+    
+    $("#con-namecc").text(data[latest].name);
+    $("#datecc").text("Date :  " + conDate + "( " + day + " )")
+    $("#stcc").text("Time :  " + time)
+    $("#durcc").text("Duration " + Number(data[latest].duration)/3600 + " Hrs")
+    $("#cc-btncc").click(function(){
+        window.location.href = data[latest].url;
+    })
+    $("#con-namecc").click(function(){
+        window.location.href = data[latest].url;
+    })
+
+}
+
+
+function showlc(data){
+    var latest = data.length-1;
+    var localDate = new Date(data[latest].start_time)
+    console.log(localDate)
+    var s = localDate + " ";
+    console.log(s)
+    var day = s.slice(0, 3)
+    var time = s.slice(16, 24)
+    var conDate = s.slice(4, 16)
+
+    
+    $("#con-namelc").text(data[latest].name);
+    $("#datelc").text("Date :  " + conDate + "( " + day + " )")
+    $("#stlc").text("Time :  " + time)
+    $("#durlc").text("Duration " + Number(data[latest].duration)/3600 + " Hrs")
+    $("#cc-btnlc").click(function(){
+        window.location.href = data[latest].url;
+    })
+    $("#con-namelc").click(function(){
+        window.location.href = data[latest].url;
+    })
+
+}
+
+
+function showcf(data){
+    var latest = 0;
+    var localDate = new Date(data[latest].start_time)
+    console.log(localDate)
+    var s = localDate + " ";
+    console.log(s)
+    var day = s.slice(0, 3)
+    var time = s.slice(16, 24)
+    var conDate = s.slice(4, 16)
+
+    
+    $("#con-namecf").text(data[latest].name);
+    $("#datecf").text("Date :  " + conDate + "( " + day + " )")
+    $("#stcf").text("Time :  " + time)
+    $("#durcf").text("Duration " + Number(data[latest].duration)/3600 + " Hrs")
+    $("#cc-btncf").click(function(){
+        window.location.href = data[latest].url;
+    })
+    $("#con-namecf").click(function(){
+        window.location.href = data[latest].url;
+    })
+
+}
+
+
+// const apiURL2 = `https://boiling-sea-29091.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
+// const apiURL = `https://mighty-temple-90200.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
+
+// const url = "https://clist.by:443/api/v2/contest/?username=Tejas_11K&api_key=8ee194a509326a0f2ff4e3af1fa5d9831f3f4444&format=json&order_by=start&resource=codechef.com&end__gt=2022-12-31T06:15:17"
+
+// var apiData;
+
+// async function callAPI() {
+// 	try {
+// 		const response = await fetch(apiURL + `&resource=${hosts}&end__gt=${nowString}&start__gt=${todayStartString}`);
+// 		const data = await response.json();
+
+// 		console.log(data);
+// 	} catch {
+// 		const response = await fetch(apiURL2 + `&resource=${hosts}&end__gt=${nowString}&start__gt=${todayStartString}`);
+// 		const data = await response.json();
+
+// 		console.log(data);
+// 	}
+// }
+
+// callAPI();
 
