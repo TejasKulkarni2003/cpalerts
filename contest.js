@@ -67,7 +67,7 @@ responsec.then((v)=>{
     return v.json()
 }).then((contest)=>{
     console.log(contest)
-    var v = contest[3].name
+    var v = contest[contest.length-1].name
     showcc(contest);
 })
 
