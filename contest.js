@@ -1,68 +1,5 @@
-
-var i=0, j=0, k=0;
-$("#menu-window").hide();
-
-$("#hamburger").click(function(){
-    $("#navb").hide();
-    $("#main").hide();
-    $("#title").hide();
-    $("#menu-window").fadeIn(1500);
-});
-$("#close").click(function(){
-    $("#navb").fadeIn(1500);
-    $("#main").fadeIn(1500);
-    $("#title").fadeIn(1500);
-    $("#menu-window").hide();
-})
-
-$("#codechef").click(function(){
-    if(i===0){
-        $("#codechef").addClass("tch-col");
-        $("#codechef").removeClass("ntch-col");
-        $("#cchef").hide();
-        i++;
-    }
-    else if(i===1){
-        $("#codechef").addClass("ntch-col");
-        $("#codechef").removeClass("tch-col");
-        $("#cchef").show();
-        i--;
-    }
-})
-
-$("#codeforces").click(function(){
-    if(j===0){
-        $("#codeforces").addClass("tch-col");
-        $("#codeforces").removeClass("ntch-col");
-        $("#cforce").hide();
-        j++;
-    }
-    else if(j===1){
-        $("#codeforces").addClass("ntch-col");
-        $("#codeforces").removeClass("tch-col");
-        $("#cforce").show();
-        j--;
-    }
-})
-
-$("#leetcode").click(function(){
-    if(k===0){
-        $("#leetcode").addClass("tch-col");
-        $("#leetcode").removeClass("ntch-col");
-        $("#leetcd").hide();
-        k++;
-    }
-    else if(k===1){
-        $("#leetcode").addClass("ntch-col");
-        $("#leetcode").removeClass("tch-col");
-        $("#leetcd").show();
-        k--;
-    }
-})
-
-
-
 let responsec = fetch("https://kontests.net/api/v1/code_chef")
+console.log(responsec)
 responsec.then((v)=>{
     return v.json()
 }).then((contest)=>{
@@ -98,6 +35,30 @@ function showcc(data){
     var time = s.slice(16, 24)
     var conDate = s.slice(4, 16)
 
+    setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+      
+        // Find the distance between now and the count down date
+        var distance = localDate.getTime() - now;
+      
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+        // Display the result in the element with id="demo"
+        document.getElementById("t1").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+      
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("t1").innerHTML = "EXPIRED";
+        }
+      }, 1000);
     
     $("#con-namecc").text(data[latest].name);
     $("#datecc").text("Date :  " + conDate + "( " + day + " )")
@@ -123,6 +84,30 @@ function showlc(data){
     var time = s.slice(16, 24)
     var conDate = s.slice(4, 16)
 
+    setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+      
+        // Find the distance between now and the count down date
+        var distance = localDate.getTime() - now;
+      
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+        // Display the result in the element with id="demo"
+        document.getElementById("t3").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+      
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("t3").innerHTML = "EXPIRED";
+        }
+      }, 1000);
     
     $("#con-namelc").text(data[latest].name);
     $("#datelc").text("Date :  " + conDate + "( " + day + " )")
@@ -148,6 +133,30 @@ function showcf(data){
     var time = s.slice(16, 24)
     var conDate = s.slice(4, 16)
 
+    setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+      
+        // Find the distance between now and the count down date
+        var distance = localDate.getTime() - now;
+      
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+        // Display the result in the element with id="demo"
+        document.getElementById("t2").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+      
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("t2").innerHTML = "EXPIRED";
+        }
+      }, 1000);
     
     $("#con-namecf").text(data[latest].name);
     $("#datecf").text("Date :  " + conDate + "( " + day + " )")
@@ -161,4 +170,3 @@ function showcf(data){
     })
 
 }
-
