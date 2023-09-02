@@ -10,7 +10,9 @@ button{
 }
 
 button:hover{
-    scale: 1.1;
+    transition: all 0.5s;
+    transform: scale(1.1);
+    
 }
 
 h5{
@@ -86,10 +88,13 @@ img{
     /* font-size: 2rem; */
     font-family: "Montserrat";
     color: #1A1E26;
-    font-weight: 900;
+    font-weight: 800;
 }
 
 .card-text:hover{
+    transition: all 0.5s;
+    font-weight: 600;
+    transform: scale(1.1);
     color: #fff;
 }
 
