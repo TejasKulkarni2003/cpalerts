@@ -1,5 +1,4 @@
 let responsec = fetch("https://kontests.net/api/v1/code_chef")
-console.log(responsec)
 responsec.then((v)=>{
     return v.json()
 }).then((contest)=>{
@@ -30,7 +29,7 @@ function showcc(data){
     var time = s.slice(16, 24)
     var conDate = s.slice(4, 16)
 
-    setInterval(function() {
+    var x = setInterval(function() {
         var now = new Date().getTime();
         var distance = localDate.getTime() - now;
       
@@ -39,12 +38,12 @@ function showcc(data){
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       
-        document.getElementById("t1").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        document.getElementById("t1").innerHTML = days + "d : " + hours + "h : "
+        + minutes + "m : " + seconds + "s ";
       
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("t1").innerHTML = "EXPIRED";
+          document.getElementById("t1").innerHTML = "Started";
         }
       }, 1000);
     
@@ -70,7 +69,7 @@ function showlc(data){
     var time = s.slice(16, 24)
     var conDate = s.slice(4, 16)
 
-    setInterval(function() {
+    var x = setInterval(function() {
         var now = new Date().getTime();
         var distance = localDate.getTime() - now;
       
@@ -79,12 +78,12 @@ function showlc(data){
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       
-        document.getElementById("t3").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        document.getElementById("t3").innerHTML = days + "d : " + hours + "h : "
+        + minutes + "m : " + seconds + "s ";
       
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("t3").innerHTML = "EXPIRED";
+          document.getElementById("t3").innerHTML = "Started";
         }
       }, 1000);
     
@@ -110,7 +109,7 @@ function showcf(data){
     var time = s.slice(16, 24)
     var conDate = s.slice(4, 16)
 
-    setInterval(function() {
+    var x = setInterval(function() {
         var now = new Date().getTime();
         var distance = localDate.getTime() - now;
       
@@ -119,12 +118,12 @@ function showcf(data){
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-        document.getElementById("t2").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        document.getElementById("t2").innerHTML = days + "d : " + hours + "h : "
+        + minutes + "m : " + seconds + "s ";
       
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("t2").innerHTML = "EXPIRED";
+          document.getElementById("t2").innerHTML = "Started";
         }
       }, 1000);
     
